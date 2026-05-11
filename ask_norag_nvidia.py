@@ -154,10 +154,10 @@ def generate_response(full_prompt):
 # MainExecution
 def main():
     print("\n\n---\n\n")
-    print("First test: ask a question about Marmeladov, a character who is actually in the book, and who is mentionned several times.\n")
+    print("First test: ask a question about Marmeladov.\n")
     generate_response(prompt_about_marmeladov)
     print("\n\n---\n\n")
-    print("Second test: ask a question about Denis, the character we injected into the book, who is only mentionned once in the middle of the text.\n")
+    print("Second test: ask a question about Denis.\n")
     generate_response(prompt_about_denis)
     print("\n\n---\n\n")
 

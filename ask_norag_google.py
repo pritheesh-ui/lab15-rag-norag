@@ -114,10 +114,11 @@ def generate_response(full_prompt):
     # Generate content with the Gemini 3 Flash Preview model.
     if STREAM_ON:
         # If streaming is on, we will receive an iterator that yields parts of the response as they are generated.
-        for chunk in client.models.generate_content_stream(
+        response = client.models.generate_content_stream(
             model=model_name,
             contents=full_prompt
-        ):
+        ) 
+        for chunk in response:
             print(chunk.text, end='', flush=True)  # flush=True makes it print immediately
     else:
         response = client.models.generate_content(
@@ -131,10 +132,10 @@ def generate_response(full_prompt):
 # 4. Execution
 def main():
     print("\n\n---\n\n")
-    print("First test: ask a question about Marmeladov, a character who is actually in the book, and who is mentionned several times.\n")
+    print("First test: ask a question about Marmeladov.\n")
     generate_response(prompt_about_marmeladov)
     print("\n\n---\n\n")
-    print("Second test: ask a question about Denis, the character we injected into the book, who is only mentionned once in the middle of the text.\n")
+    print("Second test: ask a question about Denis.\n")
     generate_response(prompt_about_denis)
     print("\n\n---\n\n")
 
