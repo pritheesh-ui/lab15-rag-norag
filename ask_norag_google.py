@@ -100,9 +100,8 @@ QUESTION:
 """
 
 
-def generate_response(full_prompt):
-    _debug = False
-    if _debug:
+def generate_response(full_prompt, debug=False):
+    if debug:
         # Print the prompt length in characters and tokens for debugging
         print(f"Prompt length: {len(full_prompt)} characters")
         # A rough estimate of token count (1 token ≈ 4 characters)
@@ -133,10 +132,10 @@ def generate_response(full_prompt):
 def main():
     print("\n\n---\n\n")
     print("First test: ask a question about Marmeladov.\n")
-    generate_response(prompt_about_marmeladov)
+    generate_response(prompt_about_marmeladov, debug=False)
     print("\n\n---\n\n")
     print("Second test: ask a question about Denis.\n")
-    generate_response(prompt_about_denis)
+    generate_response(prompt_about_denis, debug=True)
     print("\n\n---\n\n")
 
 
