@@ -34,8 +34,9 @@ This workspace contains 4 Python applications to compare **NoRAG** (full-context
 
 - Python 3.10+ (recommended)
 - API keys:
-- `GOOGLE_API_KEY` for Google scripts
-- `NVIDIA_API_KEY` for NVIDIA scripts
+   - `GOOGLE_API_KEY` from Google AI Studio (Google AI Studio](https://aistudio.google.com/app/apikey)
+   - `NVIDIA_API_KEY` from NVIDIA Build (https://build.nvidia.com/models)
+
 
 ## Setup
 
